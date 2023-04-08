@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+video{
+    height: 100%;
+    width: 100%;
+}
+.container{
+    background-color: #0c0c0c;
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.layout{
+    position: relative;
+    overflow: hidden;
+}
+.layout--active{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+.title{
+    color: #fff;
+    font-family: 'century gothic';
+    text-align: center;
+    font-size: 50px;
+    padding-bottom: 30px;
+}
+.video{
+    max-width: 800px;
+    max-height: 400px;
+    transition: .3s linear;
+}
+.video--active{
+    transform: scale(1.5);
+    max-width: 100vw;
+}
+.btn-container{
+    position: absolute;
+    bottom: 0;
+    padding: 10px;
+    background-color: transparent;
+    backdrop-filter: blur(2px);
+    width: 100%;
+    box-shadow: -1px 0px 10px #1b1c1d;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    transform: translateY(100%);
+    transition: .3s linear;
+    z-index: 5;
+}
+.layout:hover .btn-container{
+    transform: translateY(0);
+}
+.btn{
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    background-color: transparent;
+    backdrop-filter: blur(5px);
+    border: 1px solid #ffffff19;
+    border-radius: 2px;
+    cursor: pointer;
+    color: #fff;
+    transition: .3s all linear;
+}
+.btn:hover{
+    background-color: #000;
+}
+.btn-center{
+    border: none;
+    backdrop-filter: none;
+    font-size: 30px;
+    display: grid;
+    place-content: center;
+    z-index: 20;
+}
+.btn-center:hover{
+    background-color: transparent;
+}
+.progress{
+    flex-grow: 1;
+}
+.segundos-container{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: -1;
+    transition: .3s linear;
+    transform: scale(1.1);
+    opacity: 0;
+}
+.segundos-container--active{
+    z-index: 1;
+    transform: scale(1);
+    opacity: 1;
+}
+.replay{
+    display: none;
+}
+.replay--active{
+    display: block;
+}
+.texto{
+    display: flex;
+    align-items: center;
+}
+.text{
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+
+/* SCREEN */
+@media screen and (max-width: 500px) {
+    .btn{
+        width: auto;
+        height: auto;
+    }
+}
+@media screen and (max-width: 400px) {
+    .progress{
+        width: 50px;
+    }
+}

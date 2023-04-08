@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Video Play</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <h1 class="title">Videos</h1>
+
+        <div class="layout">
+
+            <video src="./video/Paisajes _ 2 Minutos _ Rios _ Naturaleza _ Agua _ Sonidos de Pajaritos _ Relax _ Relajacion(480P).mp4" class="video" poster="./video/poster.png" id="video">
+            </video>
+
+            <div class="segundos-container playing" id="adelanterAtrasar">
+                <button class="btn adelantar btn-center"><i class="fa-solid fa-backward"></i></button>
+                <button class="btn btn-center"><i class="fa-solid fa-play"></i></button>
+                <button class="btn atrasar btn-center"><i class="fa-solid fa-forward"></i></button>
+            </div>
+
+            <div class="btn-container">    
+                <button class="btn playing"><i class="fa-solid fa-play" id="pause"></i></button>
+                <!-- CLASES DE LOS BOTONES QUE NECESITO -->
+                <!-- <button class="btn pause"><i class="fa-solid fa-pause"></i></button> -->
+                <button class="btn replay"><i class="fa-solid fa-rotate-right"></i></button>
+                <input type="range" class="btn progress" id="progress" min="0" max="100" value="0">
+                <small class="texto">
+                    <p id="time" class="text"></p>
+                </small>
+                <button class="btn sound" id="sound"><i class="fa-solid fa-volume-high"></i></button>
+                <!-- <button class="btn mute"><i class="fa-solid fa-volume-xmark"></i></button> -->
+                <button class="btn maximize" id="minimizer"><i class="fa-solid fa-maximize"></i></button>
+                <!-- <button class="btn minimize"><i class="fa-solid fa-minimize"></i></button> -->
+            </div>
+            
+        </div>
+
+    </main>
+
+    <script src="https://kit.fontawesome.com/ecc2fbab5a.js" crossorigin="anonymous"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
